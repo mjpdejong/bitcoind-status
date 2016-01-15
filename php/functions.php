@@ -59,7 +59,7 @@ function getData($from_cache = false)
 
     // Get free disk space
     if ($config['display_free_disk_space'] === true) {
-        $data['free_disk_space'] = getFreeDiskSpace();
+        $data['free_disk_space'] = getFreeDiskSpace($data['blockchain_disk']);
     }
 
     if (isset($config['display_ip']) && $config['display_ip'] === true) {
@@ -245,9 +245,9 @@ function generateDonationImage()
  *
  * @return String
  */
-function getFreeDiskSpace()
+function getFreeDiskSpace($blockchain_disk)
 {
-    return convertToSI(disk_free_space(".")) . '<br />';
+    return convertToSI(disk_free_space($blockchain_disk)) . '<br />';
 }
 
 /**
