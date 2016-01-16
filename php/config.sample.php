@@ -42,7 +42,7 @@ $config = array(
   // UI
   'display_ip'              => false,
   'display_free_disk_space' => false,
-  'blockchain_disk'         => '.',
+  'blockchain_path'         => '/',
   'display_testnet'         => false,
   'display_version'         => true,
   'display_github_ribbon'   => true,
